@@ -1,5 +1,10 @@
 name: "SONAR GENERIC"
-on: push
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    types: [opened, synchronize, reopened]
 jobs:
   scan:
     uses: joe-tingsanchali-sonarsource/ghaction-templates/.github/workflows/sonar_generic.yml@main
