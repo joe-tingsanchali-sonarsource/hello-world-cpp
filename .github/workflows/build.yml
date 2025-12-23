@@ -1,10 +1,11 @@
 name: "SONAR GENERIC"
-on:
-  push:
-    branches:
-      - master
-  pull_request:
-    types: [opened, synchronize, reopened]
+# on:
+#   push:
+#     branches:
+#       - master
+#   pull_request:
+#     types: [opened, synchronize, reopened]
+on: push
 jobs:
   scan:
     uses: joe-tingsanchali-sonarsource/ghaction-templates/.github/workflows/sonar_generic.yml@main
@@ -56,8 +57,7 @@ jobs:
 # on: push
 # jobs:
 #   scan:
-#     #uses: DevSecOps4SG/Templates/.github/workflows/sonar_generic.yml@dev
-#     uses: 075-O2/zftm_u01_2.5.6_paymentprop/.github/workflows/sonar_generic.yml@development
+#     uses: org/repo/.github/workflows/sonar_generic.yml@development
 #     with:
 #       SONAR_HOST_URL: ${{ vars.SONAR_HOST_URL }}
 #       SONAR_PROJECT_KEY: ${{ vars.SONAR_PROJECT_KEY }}
